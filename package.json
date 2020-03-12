@@ -1,0 +1,23 @@
+{
+  "name": "crawler-covid-19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AurelioMarquesVulcao/crawler-COVID-19.git"
+  },
+  "author": "vulcao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AurelioMarquesVulcao/crawler-COVID-19/issues"
+  },
+  "homepage": "https://github.com/AurelioMarquesVulcao/crawler-COVID-19#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.2"
+  }
+}
