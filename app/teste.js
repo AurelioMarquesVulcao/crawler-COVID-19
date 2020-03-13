@@ -12,9 +12,7 @@ const LeanResponse = (html) => {
         //    nome: $(element).find('td').text()
         //  }
         // countr:  $(element).find('td').text().replace(',', ".").split(' ')[2] = String ? $(element).find('td').text().split(' ')[1]+$(element).find('td').text().split(' ')[2] : $(element).find('td').text().split(' ')[1]
-        countr:  $(element).find("td").slice(0,1).text(),
-        cases:  $(element).find("td").slice(1,2).text(),
-        deth:  $(element).find("td").slice(3,4).text()
+        countr:  $(element).find("td").slice(0,1).text() // o uso do slice me da o poder de definir qual item quero pegar e assim posso selecionar pontualmente qual vou sacar das varias td.
     })).get()
     return covid
 }
