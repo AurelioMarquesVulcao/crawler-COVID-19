@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// codigo aproveitado, devo mudar as variaveis antes de ir para produção
 const user = new mongoose.Schema({
     country: {
         type : String
@@ -10,6 +11,10 @@ const user = new mongoose.Schema({
     death: {
         type : String
     },
+    date: {
+        type : String
+    },
 });
 
-module.exports = User = mongoose.model('user', user);
+// aqui 'localidades' é o nome onde vou colocar meus dados ficando ... covid19/localidades
+module.exports = User = mongoose.model('localidades', user);
