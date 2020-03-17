@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
-const placesRouter = require("./src/api/routes/places");
+const placesRouter = require("./api/routes/places");
 
 mongoose.connect(
   "mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/covid-19?retryWrites=true&w=majority",

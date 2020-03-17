@@ -1,0 +1,40 @@
+version: "3.1"
+services:
+  crawler:
+    image: node:latest
+    container_name: crawler
+    restart: always
+    env_file:
+     - .env
+    
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: node src/crawler/server.js
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  api:
+    image: node:latest
+    container_name: api
+    restart: always
+    env_file:
+     - .env
+    depends_on:
+      - crawler
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: node server.js
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"

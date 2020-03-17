@@ -2,7 +2,7 @@
 // npm start
 
 const http = require("http");
-const app = require("./app");
+const app = require("./src/app");
 
 const port = process.env.Port || 3000;
 const server = http.createServer(app);
