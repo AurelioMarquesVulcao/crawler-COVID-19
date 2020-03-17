@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
-const data = require("./datenow")
+const date = require("../services/dateHours-1");
 
 const URL =
-  "mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/covid19?retryWrites=true&w=majority";
-
-
-
+  "mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/covid-19?retryWrites=true&w=majority";
 
 const localidadesSchema = new mongoose.Schema({
   country: {
@@ -22,23 +19,26 @@ const localidadesSchema = new mongoose.Schema({
   }
 });
 
-const localidadeModel = mongoose.model("localidades" + " " + data(), localidadesSchema);
-0
+
+
 module.exports = function(items) {
+  var localidadeModel = mongoose.model(
+    "places" + " " + date(),
+    localidadesSchema
+  );
+
   //var caSe = cases;
   var localidades = [];
   items.forEach(function(item, index) {
     var localidade = new localidadeModel();
-    localidade.country = item['localidade']
-    localidade.cases = item['cases']
-    localidade.death = item['death']
-  localidade.date = item['date']
+    localidade.country = item["localidade"];
+    localidade.cases = item["cases"];
+    localidade.death = item["death"];
+    localidade.date = item["date"];
 
     localidades.push(localidade);
   });
 
-  // localidade.death = 1
-  // localidade.date = 1
 
   mongoose.connect(
     URL,
@@ -67,4 +67,3 @@ module.exports = function(items) {
     }
   );
 };
-

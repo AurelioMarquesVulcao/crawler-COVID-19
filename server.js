@@ -1,17 +1,27 @@
-const express = require("express");
-const conectDB = require("./db/conection");
+// lingando servidor
+// npm start
 
-const app = express();
+const http = require("http");
+const app = require("./app");
 
-conectDB();
+const port = process.env.Port || 3000;
+const server = http.createServer(app);
+server.listen(port);
 
-app.use(express.json({ extended: false }));
+// const express = require("express");
+// const conectDB = require("./db/conection");
 
-app.use("/api/userModel", require("./api/User"));
+// const app = express();
 
-const Port = process.env.Port || 3000;
+// conectDB();
 
-app.listen(Port, () => console.log("Server Started"));
+// app.use(express.json({ extended: false }));
+
+// app.use("/api/userModel", require("./api/User"));
+
+// const Port = process.env.Port || 3000;
+
+// app.listen(Port, () => console.log("Server Started"));
 
 // lingando servidor
-// npm run server
+// npm start
