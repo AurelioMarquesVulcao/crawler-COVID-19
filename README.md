@@ -5,25 +5,23 @@
 
 * Baixe o arquivo zip
   
-  <button src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/archive/master.zip"> Baixar</button>
-
-* entre no terminal de sua preferencia e digite o caminho para a pagina do projeto.
+* Entre no terminal de sua preferencia e digite o caminho para a pagina do projeto.
 
 `cd "local da raiz do projeto"`
 
-* digite o código, isso instalará todas as dependencias que serão utilizadas no docker.
+* Digite o código, isso instalará todas as dependencias que serão utilizadas no docker.
 
 `npm install`
 
-* se estiver usando linux, você pode subir o docker usando "make up" caso use Windows use "docker-compose up -d"
+* Se estiver usando linux, você pode subir o docker usando "make up" caso use Windows use "docker-compose up -d"
 
 `make up` => linux ---- `docker-compose up -d` => Windows == macOS
 
-* verificando as imagens.
+* Verificando as imagens.
 
 `make images` => linux ---- `docker ps -a` => Windows == macOS
 
-* verificando o container.
+* Verificando o container.
 
 `make logs` => linux ---- `docker-compose down` => Windows == macOS
 
