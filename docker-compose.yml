@@ -7,8 +7,7 @@ services:
     env_file:
      - .env
     
-    ports:
-      - ${SERVER_PORT}:${SERVER_PORT}
+  
     volumes:
       - .:/src
     working_dir: /src
@@ -25,14 +24,12 @@ services:
     restart: always
     env_file:
      - .env
-    depends_on:
-      - crawler
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
     volumes:
-      - .:/usr/src/app
-    working_dir: /usr/src/app
-    command: node server.js
+      - .:/src
+    working_dir: /src
+    command: npm start
     logging:
       driver: "json-file"
       options:
