@@ -1,6 +1,8 @@
 
 # crawler-COVID-19
 
+#### Lembrem que o docker funciona com horario internacional que é +3 horas do horario de Brasilia
+
 ### Iniciando os serviços.
 
 * Baixe o arquivo zip
