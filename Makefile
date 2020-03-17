@@ -14,3 +14,8 @@ down:
 
 logs:
 	docker-compose logs -f
+
+.PHONY: images
+
+logs:
+	docker ps -a
