@@ -1,0 +1,8 @@
+celia
+mirante
+desenvolvedor remoto
+node
+14:00
+
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' api
