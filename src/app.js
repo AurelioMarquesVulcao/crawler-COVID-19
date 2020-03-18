@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 const placesRouter = require("./api/routes/places");
@@ -17,6 +18,8 @@ mongoose.connect(
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
+
 
 app.use("/places", placesRouter);
 
@@ -24,6 +27,16 @@ app.use("/places", placesRouter);
 app.use((req, res, next) => {
   const error = new Error("Not found");
   error.status = 404;
+  // res.header("Access-Control-Allow-Origin", "*");
+  // res.header(
+  //   "Access-Control-Allow-Headers",
+  //   "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  // );
+  // res.header(
+  //   "Access-Control-Allow-Methods",
+  //   "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+  // );
+
   next(error);
 });
 
@@ -36,10 +49,11 @@ app.use((error, req, res, next) => {
   });
 });
 
-// app.use((req, res, next) => {
-//   res.status(200).json({
-//     message: "Server is Running"
-//   });
-// });
+var corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200
+};
+
+
 
 module.exports = app;
