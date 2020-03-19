@@ -71,7 +71,7 @@ Log de testes da API (já no container docker) com o progrma Postman.
 
 Na pasta Front-end foi salvo um projeto Vue com uma visualização dos dados da API. Rode essa visualização localmente com:
 
-`yarn dev`
+`yarn run serve`  ---  `npm run serve`
 
 
 ##  Funcionalidades desejáveis ​​para serem implementadas	
