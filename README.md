@@ -45,7 +45,9 @@ Pode-se ajustar o Crawler para períodos mais curtos que 1 hora, foi testado com
 
 O banco de dados utilizado foi o MongoDB, e está sendo mantido online para facilitar a visualização dos testes executados e configuração do mongoDB,  dessa forma o docker apenas executa o crawler e a API.  Intruções de montagem do mongo no doker serão atualizadas para poder rodar em produção.
 
-O arquivo CSV está sendo salvo na raiz do projeto para facilitar sua localização.
+O arquivo CSV está sendo salvo na pasta dadosCSV com dentro da pasta: ./back-end/src/crawler. O resultado esperado é o seguinte.
+
+<img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-004.JPG?raw=true">
 
 ##  funcionamento da API.	
 
