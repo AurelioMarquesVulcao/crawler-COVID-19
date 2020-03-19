@@ -48,21 +48,21 @@ module.exports = function(items) {
     },
     function(error) {
       if (!error) {
-        // console.log((localidades))
+       
         localidadeModel
           .insertMany(localidades)
           .then(function(docs) {
             console.log("salvo com sucesso");
-            // console.log(localidades);
+           
             mongoose.disconnect();
           })
           .catch(function(error) {
             console.log(error);
-            process.exit(2); // remover essa linha após teste
+            process.exit(2); 
           });
       } else {
         console.log(error);
-        process.exit(1); // remover após teste.
+        process.exit(1); 
       }
     }
   );

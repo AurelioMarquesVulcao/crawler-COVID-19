@@ -5,14 +5,17 @@ const Date = require("../services/datenow");
 const Datecsv = require("../services/dateforcsv");
 const firstrun = require("./firstrun");
 
+// site a ser raspado
 const notices = "https://www.worldometers.info/coronavirus/";
 
 var localidades = [];
 
+// faz uma primeira raspagem de dados e ja inicia o banco de dados
 firstrun();
 
-// esta atualizando toda a aplicação a cada 1 hora
+// está atualizando toda a aplicação a cada 1 hora
 setInterval(function() {
+  // o crawler começa aqui.
   var localidades = [];
 
   var crawler = () => {
@@ -47,6 +50,8 @@ setInterval(function() {
         // fs.writeFileSync(
         //   "./dadosCSV/covid.19" + Datecsv() + ".csv", csv, "utf8");
       });
+      // exibo o primeiro item da lista, assim nos log possso saber 
+      // quando rodou pela ultima vez com data e hora e se os dados estão corretos
       console.log(
         JSON.stringify(localidades[0]) + " " + "Captura realizada com sucesso"
       );

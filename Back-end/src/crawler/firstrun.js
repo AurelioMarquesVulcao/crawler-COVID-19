@@ -6,8 +6,10 @@ const Datecsv = require("../services/dateforcsv");
 fs = require("fs");
 const { Parser } = require("json2csv");
 
-const notices = "https://www.worldometers.info/coronavirus/#countries";
+// site a ser raspado
+const notices = "https://www.worldometers.info/coronavirus/";
 
+// o crawler começa aqui.
 var localidades = [];
 
 module.exports = () => {
@@ -41,6 +43,8 @@ module.exports = () => {
       // const csv = json2csvParser.parse(localidades);
       // fs.writeFileSync("./dadosCSV/covid.19" + Datecsv() + ".csv", csv, "utf8");
     });
+    // exibo o primeiro item da lista, assim nos log possso saber
+    // quando rodou pela ultima vez com data e hora e se os dados estão corretos
     console.log(
       JSON.stringify(localidades[0]) + " " + "Captura realizada com sucesso"
     );
