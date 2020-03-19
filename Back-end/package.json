@@ -1,7 +1,7 @@
 {
   "name": "crawler-covid-19",
   "version": "1.0.0",
-  "description": "",
+  "description": "Raspagem de dados e API sobre o Covid 19",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/AurelioMarquesVulcao/crawler-COVID-19.git"
   },
-  "author": "",
+  "author": "Aurelio Marques Vulcão",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AurelioMarquesVulcao/crawler-COVID-19/issues"
