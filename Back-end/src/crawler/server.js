@@ -41,6 +41,7 @@ setInterval(function() {
           death: death,
           date: date
         });
+        // Cria um arquivo csv dos dados raspados
         // const json2csvParser = new Parser();
         // const csv = json2csvParser.parse(localidades);
         // fs.writeFileSync(

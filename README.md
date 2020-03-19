@@ -53,7 +53,21 @@ O arquivo CSV está sendo salvo na pasta dadosCSV com dentro da pasta: ./back-en
 
 Acesse a porta local "http://localhost:3000/places/", e poderá visualizar os dados salvos no banco de dados.
 
+A imgem docker do projeto espera o seguinte log como resposta.
+
+<img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-003.JPG?raw=true">
+
+As imagens esperadas a serem obtidas no docker são:
+
+<img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-002.JPG?raw=true">
+
+
 ##  Visualizando os dados da API.	
+
+Log de testes da API (já no container docker) com o progrma Postman.
+
+<img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-001.JPG?raw=true">
+
 
 Na pasta Front-end foi salvo um projeto Vue com uma visualização dos dados da API. Rode essa visualização localmente com:
 
