@@ -22,6 +22,8 @@ services:
     image: node:latest
     container_name: api
     restart: always
+    depends_on: 
+      - crawler
     env_file:
      - .env
     ports:

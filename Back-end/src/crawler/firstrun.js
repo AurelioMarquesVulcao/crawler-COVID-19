@@ -38,10 +38,15 @@ module.exports = () => {
         death: death,
         date: date
       });
-      // Cria um arquivo csv dos dados raspados
+      // Cria um arquivo csv dos dados raspados para execução local
       // const json2csvParser = new Parser();
       // const csv = json2csvParser.parse(localidades);
       // fs.writeFileSync("./dadosCSV/covid.19" + Datecsv() + ".csv", csv, "utf8");
+
+      // execução no docker implementar no arquivo .env as rotas
+      const json2csvParser = new Parser();
+      const csv = json2csvParser.parse(localidades);
+      fs.writeFileSync("./dadosCSV/covid.19" + Datecsv() + ".csv", csv, "utf8");
     });
     // exibo o primeiro item da lista, assim nos log possso saber
     // quando rodou pela ultima vez com data e hora e se os dados estão corretos
