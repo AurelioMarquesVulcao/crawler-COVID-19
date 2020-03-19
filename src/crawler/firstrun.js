@@ -35,11 +35,11 @@ module.exports = () => {
         cases: caSe,
         death: death,
         date: date
-        
       });
       const json2csvParser = new Parser();
       const csv = json2csvParser.parse(localidades);
-      fs.writeFileSync("../../dados.csv/covid-19-DADOS" + Datecsv() + ".csv", csv, "utf8");
+      fs.writeFileSync("../covid.19.csv", csv, "utf8");
+      
     });
     console.log(
       JSON.stringify(localidades[0]) + " " + "Captura realizada com sucesso"

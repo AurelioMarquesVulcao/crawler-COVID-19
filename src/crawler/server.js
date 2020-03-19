@@ -43,7 +43,8 @@ setInterval(function() {
         });
         const json2csvParser = new Parser();
         const csv = json2csvParser.parse(localidades);
-        fs.writeFileSync("../../dados.csv/covid-19-DADOS" + Datecsv() + ".csv", csv, "utf8");
+        fs.writeFile("../covid.19.csv", csv, "utf8");
+        
       });
       console.log(
         JSON.stringify(localidades[0]) + " " + "Captura realizada com sucesso"
