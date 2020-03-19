@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 const date = require("../services/dateHours-1");
 
+// local onde o banco está sendo salvo
 const URL =
   "mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/covid-19?retryWrites=true&w=majority";
 
+// preferi inserir os dados como string para não ser necessario tratar "." e ","
 const localidadesSchema = new mongoose.Schema({
   country: {
     type: String
@@ -18,8 +20,6 @@ const localidadesSchema = new mongoose.Schema({
     type: String
   }
 });
-
-
 
 module.exports = function(items) {
   var localidadeModel = mongoose.model(
@@ -39,7 +39,6 @@ module.exports = function(items) {
     localidades.push(localidade);
   });
 
-
   mongoose.connect(
     URL,
     {
@@ -48,21 +47,20 @@ module.exports = function(items) {
     },
     function(error) {
       if (!error) {
-       
         localidadeModel
           .insertMany(localidades)
           .then(function(docs) {
             console.log("salvo com sucesso");
-           
+
             mongoose.disconnect();
           })
           .catch(function(error) {
             console.log(error);
-            process.exit(2); 
+            process.exit(2);
           });
       } else {
         console.log(error);
-        process.exit(1); 
+        process.exit(1);
       }
     }
   );

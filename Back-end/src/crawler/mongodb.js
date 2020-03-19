@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 const date = require("../services/datehours");
 
+// local onde o banco está sendo salvo
 const URL =
   "mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/covid-19?retryWrites=true&w=majority";
 
+// preferi inserir os dados como string para não ser necessario tratar "." e ","
 const localidadesSchema = new mongoose.Schema({
   country: {
     type: String
