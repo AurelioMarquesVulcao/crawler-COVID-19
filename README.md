@@ -49,7 +49,7 @@ O arquivo CSV está sendo salvo na raiz do projeto para facilitar sua localizaç
 
 ##  funcionamento da API.	
 
-Acesse a porta local 3000 e poderá visualizar os dados salvos no banco de dados.
+Acesse a porta local "http://localhost:3000/places/", e poderá visualizar os dados salvos no banco de dados.
 
 ##  Visualizando os dados da API.	
 
