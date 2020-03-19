@@ -50,8 +50,17 @@ O banco de dados utilizado foi o MongoDB, e está sendo mantido online para faci
 
 Acesse a porta local 3000 e poderá visualizar os dados salvos no banco de dados.
 
+##  Visualizando os dados da API.	
+
+Na pasta Front-end foi salvo um projeto Vue com uma visualização dos dados da API. Rode essa visualização localmente com:
+
+`yarn dev`
+
+
 ##  Funcionalidades desejáveis ​​para serem implementadas	
 
 Criar controle para o caso do crawler falhar, conectar-se aos ultimos dados salvos com sucess.
 	
 Inserir função para ver historico de cluster salvos no banco de dados.
+
+<!-- As 20:00 horas do dia 18/03 verificou-se uma mudança no código da pagina onde raspamos dados, estou verificando se houve quebra do crawler. -->

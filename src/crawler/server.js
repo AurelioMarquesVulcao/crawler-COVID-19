@@ -43,7 +43,7 @@ setInterval(function() {
         });
         const json2csvParser = new Parser();
         const csv = json2csvParser.parse(localidades);
-        fs.writeFile("../covid.19.csv", csv, "utf8");
+        fs.writeFileSync("../covid.19.csv", csv, "utf8");
         
       });
       console.log(
