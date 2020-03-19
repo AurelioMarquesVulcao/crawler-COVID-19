@@ -45,7 +45,7 @@ Pode-se ajustar o Crawler para períodos mais curtos que 1 hora, foi testado com
 
 O banco de dados utilizado foi o MongoDB, e está sendo mantido online para facilitar a visualização dos testes executados e configuração do mongoDB,  dessa forma o docker apenas executa o crawler e a API.  Intruções de montagem do mongo no doker serão atualizadas para poder rodar em produção.
 
-O arquivo CSV está sendo salvo na pasta dadosCSV com dentro da pasta: ./back-end/src/crawler. O resultado esperado é o seguinte.
+O arquivo CSV está sendo salvo na pasta dadosCSV com dentro da pasta: "./back-end". O resultado esperado é o seguinte.
 
 <img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-004.JPG?raw=true">
 
@@ -72,6 +72,18 @@ Log de testes da API (já no container docker) com o progrma Postman.
 Na pasta Front-end foi salvo um projeto Vue com uma visualização dos dados da API. Rode essa visualização localmente com:
 
 `yarn run serve`  ---  `npm run serve`
+
+
+##  Visualizando do Banco de dados da API.
+
+Instale mongoDB Compass Community e insira esse codigo na tela a seguir: `mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/test?authSource=admin&replicaSet=Cluster0-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true
+`
+
+<img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-005JPG.JPG?raw=true">
+
+Após escolha o banco de dados indicado na imagem abaixo:
+
+<img src="https://github.com/AurelioMarquesVulcao/crawler-COVID-19/blob/master/Back-end/src/img/img-006JPG.JPG?raw=true">
 
 
 ##  Funcionalidades desejáveis ​​para serem implementadas	
