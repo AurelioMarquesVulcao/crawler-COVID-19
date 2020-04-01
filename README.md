@@ -74,7 +74,7 @@ Na pasta Front-end foi salvo um projeto Vue com uma visualização dos dados da 
 `yarn run serve`  ---  `npm run serve`
 
 
-##  Visualizando o Banco de dados da API.
+##  Visualizando do Banco de dados da API.
 
 Instale mongoDB Compass Community e insira esse codigo na tela a seguir: `mongodb+srv://admin:1234@cluster0-9jhwf.mongodb.net/test?authSource=admin&replicaSet=Cluster0-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true
 `
