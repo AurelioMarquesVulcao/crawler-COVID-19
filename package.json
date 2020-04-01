@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "pm2 start server.js --watch --no-daemon --node-args=\"-r esm\""
+    "start": "pm2 start server.js --watch --no-daemon --node-args=\"-r esm\"",
+    "prod": "node server.js"
   },
   "repository": {
     "type": "git",
